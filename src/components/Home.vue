@@ -1,12 +1,14 @@
 <template>
     <div id="gome">
         <h1>Home</h1>
+        <all-my-channels/>
     </div>
 </template>
 
 <script>
-
+import AllMyChannels from './AllMyChannels.vue';
     export default {
+        components: { AllMyChannels },
         name: 'Home',
         data() {
         },

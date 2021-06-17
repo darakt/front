@@ -45,11 +45,14 @@ const store = createStore({
                   });
     },
     getMyChannels({ state }) {
-      axios.get(`http://localhost:3000/channel/user/${state.id}`,{
+      axios
+        .get(`http://localhost:3000/channel/user/${state.id}`,{
                     headers: {
                           Authorization: 'Bearer ' + state.token
                     },
-                  }).then((resp) => {console.log(resp)}).catch((err) => {console.log(err); console.log(state.token)})
+                  })
+        .then((resp) => {console.log(resp)})
+        .catch((err) => {console.log(err)})
     }
   }
 })
